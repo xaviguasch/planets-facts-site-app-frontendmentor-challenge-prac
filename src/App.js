@@ -1,6 +1,7 @@
 import { Outlet, Link } from 'react-router-dom'
 
 import Header from './components/Header'
+import PlanetContainer from './components/PlanetContainer'
 
 import './App.css'
 

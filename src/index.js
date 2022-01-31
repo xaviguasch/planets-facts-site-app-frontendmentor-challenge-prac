@@ -1,6 +1,8 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
+
+import PlanetContainer from './components/PlanetContainer'
 import Planet from './components/Planet'
 
 import './index.css'
@@ -11,6 +13,9 @@ ReactDOM.render(
     <BrowserRouter>
       <Routes>
         <Route path='/' element={<App />}>
+          <Route path='planets' element={<PlanetContainer />}>
+            <Route path=':planetName' element={<Planet />} />
+          </Route>
           <Route
             path='*'
             element={
@@ -19,8 +24,6 @@ ReactDOM.render(
               </main>
             }
           />
-
-          <Route path='/planet' element={<Planet />} />
         </Route>
       </Routes>
     </BrowserRouter>

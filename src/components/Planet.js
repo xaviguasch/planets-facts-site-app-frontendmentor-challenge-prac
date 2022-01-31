@@ -1,13 +1,13 @@
 import React from 'react'
-
-import { Link } from 'react-router-dom'
+import { useParams } from 'react-router-dom'
 
 import './Planet.css'
 
 const Planet = () => {
+  let params = useParams()
   return (
     <div className='Planet'>
-      <h2>this is the planet component</h2>
+      <h1>{params.planetName}</h1>
     </div>
   )
 }
