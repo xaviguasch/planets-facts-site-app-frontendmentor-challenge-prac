@@ -11,9 +11,18 @@ ReactDOM.render(
     <BrowserRouter>
       <Routes>
         <Route path='/' element={<App />}>
-          <Route path='planet' element={<Planet />} />
+          <Route
+            path='*'
+            element={
+              <main>
+                <p>There's nothing here!</p>
+              </main>
+            }
+          />
+
+          <Route path='/planet' element={<Planet />} />
         </Route>
-      </Routes>{' '}
+      </Routes>
     </BrowserRouter>
   </React.StrictMode>,
   document.getElementById('root')
