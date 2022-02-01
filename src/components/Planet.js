@@ -16,7 +16,17 @@ const Planet = () => {
 
   const dataPlanet = data.find((item) => item.name.toLowerCase() === params.planetName)
 
-  const { name, images, overview, structure, geology } = dataPlanet
+  const {
+    name,
+    images,
+    overview,
+    structure,
+    geology,
+    rotation,
+    revolution,
+    radius,
+    temperature,
+  } = dataPlanet
 
   if (dataPlanet) {
     return (
@@ -84,6 +94,33 @@ const Planet = () => {
             <img src={images.geology.replace('./', '/')} alt={name} />
           </div>
         )}
+
+        <ul>
+          <li>
+            <div>
+              <span>Rotation Time</span>
+              <span>{rotation} days</span>
+            </div>
+          </li>
+          <li>
+            <div>
+              <span>Revolution Time</span>
+              <span>{revolution} days</span>
+            </div>
+          </li>
+          <li>
+            <div>
+              <span>Radius</span>
+              <span>{radius} km</span>
+            </div>
+          </li>
+          <li>
+            <div>
+              <span>Average temp.</span>
+              <span>{temperature} ºC</span>
+            </div>
+          </li>
+        </ul>
       </div>
     )
   } else {
