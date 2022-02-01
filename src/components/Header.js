@@ -10,11 +10,13 @@ const Header = () => {
       <h2>The Planets</h2>
 
       <nav>
-        {data.map((d) => (
-          <Link to={`/planets/${d.name.toLowerCase()}`} key={d.name}>
-            {d.name}
-          </Link>
-        ))}
+        <ul>
+          {data.map((d) => (
+            <li key={d.name}>
+              <Link to={`/planets/${d.name.toLowerCase()}`}>{d.name}</Link>
+            </li>
+          ))}
+        </ul>
       </nav>
     </div>
   )
