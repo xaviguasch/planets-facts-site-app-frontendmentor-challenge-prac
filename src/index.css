@@ -55,6 +55,7 @@
 
   /* Background  */
   --clr-dark-bg: hsla(240, 67%, 8%, 1);
+  --clr-turquoise-bg: hsla(194, 48%, 49%, 1);
 }
 
 body {
@@ -111,4 +112,40 @@ img {
   font-size: var(--fs-20);
   text-transform: uppercase;
   letter-spacing: -0.75px;
+}
+
+/* ================== */
+/* Links */
+/* ================== */
+.source__link {
+  font-weight: var(--fw-bold);
+  color: var(--clr-grey-text);
+}
+
+.source__link:hover,
+.source__link:focus {
+  text-decoration: none;
+}
+
+/* ================== */
+/* Buttons & inputs */
+/* ================== */
+.Planet__btn {
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: var(--fw-bold);
+  letter-spacing: 1.93px;
+  color: var(--clr-grey-text);
+  font-size: var(--fs-09);
+
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+
+  padding: 1em 0;
+  border-bottom: 4px solid transparent;
+}
+
+.Planet__btn.active {
+  border-bottom: 4px solid var(--clr-turquoise-bg);
 }

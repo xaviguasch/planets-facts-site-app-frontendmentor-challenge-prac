@@ -30,12 +30,12 @@ const Planet = () => {
 
   if (dataPlanet) {
     return (
-      <div className='Planet'>
+      <div className={`Planet ${name}`}>
         <nav className='Planet__nav'>
           <ul>
             <li>
               <button
-                className={`planet--btn ${infoDisplay === 'overview' ? 'active' : ''}`}
+                className={`Planet__btn ${infoDisplay === 'overview' ? 'active' : ''}`}
                 onClick={handleInfoDisplayChange}
                 value='overview'
               >
@@ -44,7 +44,7 @@ const Planet = () => {
             </li>
             <li>
               <button
-                className={`planet--btn ${infoDisplay === 'structure' ? 'active' : ''}`}
+                className={`Planet__btn ${infoDisplay === 'structure' ? 'active' : ''}`}
                 onClick={handleInfoDisplayChange}
                 value='structure'
               >
@@ -53,7 +53,7 @@ const Planet = () => {
             </li>
             <li>
               <button
-                className={`planet--btn ${infoDisplay === 'surface' ? 'active' : ''}`}
+                className={`Planet__btn ${infoDisplay === 'surface' ? 'active' : ''}`}
                 onClick={handleInfoDisplayChange}
                 value='surface'
               >
