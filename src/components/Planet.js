@@ -31,11 +31,11 @@ const Planet = () => {
   if (dataPlanet) {
     return (
       <div className='Planet'>
-        <nav>
+        <nav className='Planet__nav'>
           <ul>
             <li>
               <button
-                className={`planet-btn ${infoDisplay === 'overview' ? 'active' : ''}`}
+                className={`planet--btn ${infoDisplay === 'overview' ? 'active' : ''}`}
                 onClick={handleInfoDisplayChange}
                 value='overview'
               >
@@ -44,7 +44,7 @@ const Planet = () => {
             </li>
             <li>
               <button
-                className={`planet-btn ${infoDisplay === 'structure' ? 'active' : ''}`}
+                className={`planet--btn ${infoDisplay === 'structure' ? 'active' : ''}`}
                 onClick={handleInfoDisplayChange}
                 value='structure'
               >
@@ -53,7 +53,7 @@ const Planet = () => {
             </li>
             <li>
               <button
-                className={`planet-btn ${infoDisplay === 'surface' ? 'active' : ''}`}
+                className={`planet--btn ${infoDisplay === 'surface' ? 'active' : ''}`}
                 onClick={handleInfoDisplayChange}
                 value='surface'
               >
@@ -64,60 +64,85 @@ const Planet = () => {
         </nav>
 
         {infoDisplay === 'overview' && (
-          <div>
-            <h1>{name}</h1>
-            <p>{overview.content}</p>
-            <p>
-              Source: <a href={overview.source}>Wikipedia</a>
+          <div className='Planet__copy'>
+            <h1 className='name'>{name}</h1>
+            <p className='text'>{overview.content}</p>
+            <p className='source'>
+              Source:{' '}
+              <a className='source__link' href={overview.source}>
+                Wikipedia
+              </a>
             </p>
-            <img src={images.planet.replace('./', '/')} alt={name} />
+            <img
+              className='planet-img'
+              src={images.planet.replace('./', '/')}
+              alt={name}
+            />
           </div>
         )}
         {infoDisplay === 'structure' && (
-          <div>
-            <h1>{name}</h1>
-            <p>{structure.content}</p>
-            <p>
-              Source: <a href={structure.source}>Wikipedia</a>
+          <div className='Planet__copy'>
+            <h1 className='name'>{name}</h1>
+            <p className='text'>{structure.content}</p>
+            <p className='source'>
+              Source:{' '}
+              <a className='source__link' href={structure.source}>
+                Wikipedia
+              </a>
             </p>
-            <img src={images.internal.replace('./', '/')} alt={name} />
+            <img
+              className='planet-img'
+              src={images.internal.replace('./', '/')}
+              alt={name}
+            />
           </div>
         )}
         {infoDisplay === 'surface' && (
-          <div>
-            <h1>{name}</h1>
-            <p>{geology.content}</p>
-            <p>
-              Source: <a href={geology.source}>Wikipedia</a>
+          <div className='Planet__copy'>
+            <h1 className='name'>{name}</h1>
+            <p className='text'>{geology.content}</p>
+            <p className='source'>
+              Source:{' '}
+              <a className='source__link' href={geology.source}>
+                Wikipedia
+              </a>
             </p>
-            <img src={images.planet.replace('./', '/')} alt={name} />
-            <img src={images.geology.replace('./', '/')} alt={name} />
+            <img
+              className='planet-img'
+              src={images.planet.replace('./', '/')}
+              alt={name}
+            />
+            <img
+              className='planet-img planet-img__2'
+              src={images.geology.replace('./', '/')}
+              alt={name}
+            />
           </div>
         )}
 
-        <ul>
+        <ul className='Planet__stats'>
           <li>
             <div>
-              <span>Rotation Time</span>
-              <span>{rotation} days</span>
+              <span className='stat-name'>Rotation Time</span>
+              <span className='stat-value'>{rotation} days</span>
             </div>
           </li>
           <li>
             <div>
-              <span>Revolution Time</span>
-              <span>{revolution} days</span>
+              <span className='stat-name'>Revolution Time</span>
+              <span className='stat-value'>{revolution} days</span>
             </div>
           </li>
           <li>
             <div>
-              <span>Radius</span>
-              <span>{radius} km</span>
+              <span className='stat-name'>Radius</span>
+              <span className='stat-value'>{radius} km</span>
             </div>
           </li>
           <li>
             <div>
-              <span>Average temp.</span>
-              <span>{temperature} ºC</span>
+              <span className='stat-name'>Average temp.</span>
+              <span className='stat-value'>{temperature} ºC</span>
             </div>
           </li>
         </ul>
@@ -126,7 +151,9 @@ const Planet = () => {
   } else {
     return (
       <div className='Planet'>
-        <h2>This planet: {params.planetName} is not available</h2>
+        <div className='error-card'>
+          <h2>This planet: {params.planetName} is not available</h2>
+        </div>
       </div>
     )
   }

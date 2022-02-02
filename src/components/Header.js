@@ -6,8 +6,8 @@ import './Header.css'
 
 const Header = () => {
   return (
-    <div className='Heder'>
-      <h2>The Planets</h2>
+    <div className='Header'>
+      <h2 className='Header__title'>The Planets</h2>
 
       <nav>
         <ul>

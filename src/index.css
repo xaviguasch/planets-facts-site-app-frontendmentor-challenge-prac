@@ -76,3 +76,39 @@ img {
 /* ================== */
 /* Typography */
 /* ================== */
+.Header__title {
+  font-family: var(--ff-secondary);
+  text-transform: uppercase;
+  font-size: var(--fs-28);
+  letter-spacing: -1.05px;
+}
+
+.name {
+  font-family: var(--ff-secondary);
+  font-size: var(--fs-40);
+  text-transform: uppercase;
+}
+
+.text {
+  font-size: var(--fs-11);
+}
+
+.source {
+  color: var(--clr-grey-text);
+  font-size: var(--fs-12);
+}
+
+.stat-name {
+  color: var(--clr-grey-text);
+  font-size: var(--fs-08);
+  letter-spacing: 0.73px;
+  text-transform: uppercase;
+  font-weight: var(--fw-bold);
+}
+
+.stat-value {
+  font-family: var(--ff-secondary);
+  font-size: var(--fs-20);
+  text-transform: uppercase;
+  letter-spacing: -0.75px;
+}
