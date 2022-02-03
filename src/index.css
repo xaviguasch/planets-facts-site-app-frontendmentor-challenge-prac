@@ -193,3 +193,38 @@ img {
 ul {
   list-style: none;
 }
+
+/* ================== */
+/* MEDIA QUERIES */
+/* ================== */
+
+/* Tablet */
+@media (min-width: 768px) {
+  /* Typography */
+
+  .name {
+    font-size: var(--fs-48);
+  }
+
+  .stat-value {
+    font-size: var(--fs-24);
+    letter-spacing: -0.9px;
+  }
+
+  /* Buttons & inputs */
+  .Planet__btn {
+    /* text-decoration: none;
+    text-transform: uppercase;
+    font-weight: var(--fw-bold);
+    letter-spacing: 1.93px;
+    color: var(--clr-white-text-alt);
+    font-size: var(--fs-09);
+
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+
+    padding: 1.75em 0;
+    border-bottom: 4px solid transparent; */
+  }
+}
