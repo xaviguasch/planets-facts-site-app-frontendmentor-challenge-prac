@@ -149,3 +149,10 @@ img {
 .Planet__btn.active {
   border-bottom: 4px solid var(--clr-turquoise-bg);
 }
+
+/* ================== */
+/* Utility styles */
+/* ================== */
+ul {
+  list-style: none;
+}

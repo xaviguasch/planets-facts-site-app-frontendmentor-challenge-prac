@@ -2,6 +2,8 @@ import { Link } from 'react-router-dom'
 
 import data from '../data.json'
 
+import IconHamburger from '../assets/icon-hamburger.svg'
+
 import './Header.css'
 
 const Header = () => {
@@ -10,13 +12,17 @@ const Header = () => {
       <h2 className='Header__title'>The Planets</h2>
 
       <nav>
-        <ul>
+        <ul className='Header__nav__list'>
           {data.map((d) => (
             <li key={d.name}>
               <Link to={`/planets/${d.name.toLowerCase()}`}>{d.name}</Link>
             </li>
           ))}
         </ul>
+
+        <div className='Header__nav__hamb'>
+          <img src={IconHamburger} alt='icon-hamburger' />
+        </div>
       </nav>
     </div>
   )
