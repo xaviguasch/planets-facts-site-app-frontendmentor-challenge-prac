@@ -58,7 +58,15 @@
   --clr-dark-bg: hsla(240, 67%, 8%, 1);
 
   /* Others */
-  --clr-turquoise: hsla(194, 48%, 49%, 1);
+  --clr-mercury: hsla(194, 48%, 49%, 1);
+  --clr-venus: hsla(33, 82%, 61%, 1);
+  --clr-earth: hsla(263, 67%, 51%, 1);
+  --clr-mars: hsla(10, 63%, 51%, 1);
+  --clr-jupiter: hsla(2, 68%, 53%, 1);
+  --clr-saturn: hsla(17, 73%, 46%, 1);
+  --clr-uranus: hsla(169, 73%, 44%, 1);
+  --clr-neptune: hsla(222, 87%, 56%, 1);
+
   --clr-white-alt: hsla(0, 0%, 100%, 0.2);
 }
 
@@ -151,8 +159,32 @@ img {
 }
 
 .Planet__btn.active {
-  border-bottom: 4px solid var(--clr-turquoise);
   color: var(--clr-white-text);
+}
+
+.Mercury .Planet__btn.active {
+  border-bottom: 4px solid var(--clr-mercury);
+}
+.Venus .Planet__btn.active {
+  border-bottom: 4px solid var(--clr-venus);
+}
+.Earth .Planet__btn.active {
+  border-bottom: 4px solid var(--clr-earth);
+}
+.Mars .Planet__btn.active {
+  border-bottom: 4px solid var(--clr-mars);
+}
+.Jupiter .Planet__btn.active {
+  border-bottom: 4px solid var(--clr-jupiter);
+}
+.Saturn .Planet__btn.active {
+  border-bottom: 4px solid var(--clr-saturn);
+}
+.Uranus .Planet__btn.active {
+  border-bottom: 4px solid var(--clr-uranus);
+}
+.Neptune .Planet__btn.active {
+  border-bottom: 4px solid var(--clr-neptune);
 }
 
 /* ================== */

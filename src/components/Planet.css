@@ -16,5 +16,67 @@
 }
 
 .Planet__content {
-  padding: 6em 1.5em 3em;
+  padding: 5em 1.5em 3em;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.75em;
+}
+
+.Planet__main {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 4.5em;
+}
+
+.planet-img-container {
+  position: relative;
+}
+
+.planet-img {
+  width: 111px;
+}
+
+.planet-img__2 {
+  position: absolute;
+  top: 30%;
+  transform: scale(0.5);
+}
+
+.Planet__copy {
+  text-align: center;
+}
+
+.source {
+  margin-top: 2em;
+}
+
+.icon-source {
+  display: inline-block;
+  position: relative;
+  top: 3px;
+  margin-left: 0.25em;
+}
+
+.Planet__stats {
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+}
+
+.stat-item {
+  padding: 0.25em 1.5em 0.4em;
+  border: 1px solid var(--clr-white-alt);
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
