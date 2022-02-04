@@ -68,6 +68,7 @@
   --clr-neptune: hsla(222, 87%, 56%, 1);
 
   --clr-white-alt: hsla(0, 0%, 100%, 0.2);
+  --clr-white-alt-2: hsla(0, 0%, 100%, 0.1);
 }
 
 body {
@@ -94,6 +95,7 @@ img {
   text-transform: uppercase;
   font-size: var(--fs-28);
   letter-spacing: -1.05px;
+  line-height: 1.29;
 }
 
 .name {

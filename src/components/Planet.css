@@ -85,3 +85,76 @@
   justify-content: space-between;
   align-items: center;
 }
+
+/* Navigation modal */
+.Planet--modal {
+  border-top: 1px solid var(--clr-white-alt);
+
+  padding: 2.75em 1.5em;
+}
+
+.modal__link {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.3em 0;
+  border-bottom: 1px solid var(--clr-white-alt-2);
+}
+
+.modal__link:hover {
+  border-bottom: 1px solid var(--clr-white-alt);
+}
+
+.modal__link:hover .icon-chevron svg path {
+  stroke: var(--clr-white-text);
+  fill: var(--clr-white-text);
+}
+
+.planet-symbol-pair {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1.5em;
+}
+
+.modal__link .name-in-modal {
+  color: var(--clr-white-text);
+  font-size: var(--fs-15);
+  font-weight: var(--fw-bold);
+  letter-spacing: 1.36px;
+  text-transform: uppercase;
+  line-height: 1;
+  margin-bottom: -0.3em;
+}
+
+.symbol {
+  display: inline-block;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+}
+
+.symbol.Mercury {
+  background-color: var(--clr-mercury);
+}
+.symbol.Venus {
+  background-color: var(--clr-venus);
+}
+.symbol.Earth {
+  background-color: var(--clr-earth);
+}
+.symbol.Mars {
+  background-color: var(--clr-mars);
+}
+.symbol.Jupiter {
+  background-color: var(--clr-jupiter);
+}
+.symbol.Saturn {
+  background-color: var(--clr-saturn);
+}
+.symbol.Uranus {
+  background-color: var(--clr-uranus);
+}
+.symbol.Neptune {
+  background-color: var(--clr-neptune);
+}

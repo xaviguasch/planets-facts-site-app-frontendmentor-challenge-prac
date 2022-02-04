@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { useParams } from 'react-router-dom'
+import { useParams, Link } from 'react-router-dom'
 
 import data from '../data.json'
 
@@ -7,6 +7,7 @@ import './Planet.css'
 
 const Planet = () => {
   const [infoDisplay, setInfoDisplay] = useState('overview')
+  const [isNavModalOpen, setIsNavModalOpen] = useState(false)
 
   const handleInfoDisplayChange = (e) => {
     setInfoDisplay(e.target.value)
@@ -27,6 +28,30 @@ const Planet = () => {
     radius,
     temperature,
   } = dataPlanet
+
+  if (isNavModalOpen) {
+    return (
+      <div className='Planet--modal'>
+        <ul className='modal--nav--list'>
+          {data.map((d) => (
+            <li key={d.name}>
+              <Link className='modal__link' to={`/planets/${d.name.toLowerCase()}`}>
+                <div className='planet-symbol-pair'>
+                  <span className={`symbol ${d.name}`}></span>
+                  <span className='name-in-modal'>{d.name}</span>
+                </div>
+                <div className='icon-chevron'>
+                  <svg xmlns='http://www.w3.org/2000/svg' width='6' height='8'>
+                    <path fill='none' stroke='#FFF' opacity='.4' d='M1 0l4 4-4 4' />
+                  </svg>
+                </div>
+              </Link>
+            </li>
+          ))}
+        </ul>
+      </div>
+    )
+  }
 
   if (dataPlanet) {
     return (
