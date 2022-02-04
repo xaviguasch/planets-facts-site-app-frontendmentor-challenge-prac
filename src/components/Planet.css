@@ -1,4 +1,7 @@
 .Planet {
+  display: grid;
+  grid-template-rows: repeat(3, auto);
+  padding-bottom: 3em;
 }
 
 .Planet__nav {
@@ -15,46 +18,46 @@
   padding: 0 1.5em;
 }
 
-.Planet__content {
-  padding: 5em 1.5em 3em;
-
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 1.75em;
-}
-
-.Planet__main {
-  position: relative;
-
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 4.5em;
-}
-
 .planet-img-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 100%;
+
+  height: 300px;
+
   position: relative;
 }
 
 .planet-img {
-  width: 111px;
+  transform-origin: center;
+
+  transform: scale(0.5);
 }
 
 .planet-img__2 {
   position: absolute;
-  top: 30%;
-  transform: scale(0.5);
+  top: 10%;
+
+  transform: scale(0.2);
+}
+
+.Planet__copy,
+.Planet__stats {
+  padding: 0 1.5em;
 }
 
 .Planet__copy {
   text-align: center;
 }
 
+.text {
+  margin-top: 1em;
+}
+
 .source {
-  margin-top: 2em;
+  margin-top: 0.85em;
 }
 
 .icon-source {
@@ -70,6 +73,8 @@
   display: flex;
   flex-direction: column;
   gap: 0.5em;
+
+  margin-top: 1.75em;
 }
 
 .stat-item {

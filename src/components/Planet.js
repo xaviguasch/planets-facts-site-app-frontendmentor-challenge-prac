@@ -63,100 +63,99 @@ const Planet = () => {
           </ul>
         </nav>
 
-        <div className='Planet__content'>
-          {infoDisplay === 'overview' && (
-            <div className='Planet__main'>
-              <div className='planet-img-container'>
-                <img
-                  className='planet-img'
-                  src={images.planet.replace('./', '/')}
-                  alt={name}
-                />
-              </div>
-              <div className='Planet__copy'>
-                <h1 className='name'>{name}</h1>
-                <p className='text'>{overview.content}</p>
-                <p className='source'>
-                  Source :{' '}
-                  <a className='source__link' href={overview.source}>
-                    Wikipedia
-                  </a>{' '}
-                  <img
-                    className='icon-source'
-                    src='../assets/icon-source.svg'
-                    alt='icon-source'
-                  />
-                </p>
-              </div>
-            </div>
-          )}
-          {infoDisplay === 'structure' && (
-            <div className='Planet__main'>
-              <div className='planet-img-container'>
-                <img
-                  className='planet-img'
-                  src={images.internal.replace('./', '/')}
-                  alt={name}
-                />
-              </div>
-              <div className='Planet__copy'>
-                <h1 className='name'>{name}</h1>
-                <p className='text'>{structure.content}</p>
-                <p className='source'>
-                  Source:{' '}
-                  <a className='source__link' href={structure.source}>
-                    Wikipedia
-                  </a>
-                </p>
-              </div>
-            </div>
-          )}
-          {infoDisplay === 'surface' && (
-            <div className='Planet__main'>
-              <div className='planet-img-container'>
-                <img
-                  className='planet-img'
-                  src={images.planet.replace('./', '/')}
-                  alt={name}
-                />
-                <img
-                  className='planet-img planet-img__2'
-                  src={images.geology.replace('./', '/')}
-                  alt={name}
-                />
-              </div>
-              <div className='Planet__copy'>
-                <h1 className='name'>{name}</h1>
-                <p className='text'>{geology.content}</p>
-                <p className='source'>
-                  Source:{' '}
-                  <a className='source__link' href={geology.source}>
-                    Wikipedia
-                  </a>
-                </p>
-              </div>
-            </div>
-          )}
+        {infoDisplay === 'overview' && (
+          <div className='planet-img-container'>
+            <img
+              className='planet-img'
+              src={images.planet.replace('./', '/')}
+              alt={name}
+            />
+          </div>
+        )}
+        {infoDisplay === 'structure' && (
+          <div className='planet-img-container'>
+            <img
+              className='planet-img'
+              src={images.internal.replace('./', '/')}
+              alt={name}
+            />
+          </div>
+        )}
+        {infoDisplay === 'surface' && (
+          <div className='planet-img-container'>
+            <img
+              className='planet-img'
+              src={images.planet.replace('./', '/')}
+              alt={name}
+            />
+            <img
+              className='planet-img planet-img__2'
+              src={images.geology.replace('./', '/')}
+              alt={name}
+            />
+          </div>
+        )}
 
-          <ul className='Planet__stats'>
-            <li className='stat-item'>
-              <span className='stat-name'>Rotation Time</span>
-              <span className='stat-value'>{rotation} days</span>
-            </li>
-            <li className='stat-item'>
-              <span className='stat-name'>Revolution Time</span>
-              <span className='stat-value'>{revolution} days</span>
-            </li>
-            <li className='stat-item'>
-              <span className='stat-name'>Radius</span>
-              <span className='stat-value'>{radius} km</span>
-            </li>
-            <li className='stat-item'>
-              <span className='stat-name'>Average temp.</span>
-              <span className='stat-value'>{temperature} ºC</span>
-            </li>
-          </ul>
-        </div>
+        {infoDisplay === 'overview' && (
+          <div className='Planet__copy'>
+            <h1 className='name'>{name}</h1>
+            <p className='text'>{overview.content}</p>
+            <p className='source'>
+              Source :{' '}
+              <a className='source__link' href={overview.source}>
+                Wikipedia
+              </a>{' '}
+              <img
+                className='icon-source'
+                src='../assets/icon-source.svg'
+                alt='icon-source'
+              />
+            </p>
+          </div>
+        )}
+        {infoDisplay === 'structure' && (
+          <div className='Planet__copy'>
+            <h1 className='name'>{name}</h1>
+            <p className='text'>{structure.content}</p>
+            <p className='source'>
+              Source:{' '}
+              <a className='source__link' href={structure.source}>
+                Wikipedia
+              </a>
+            </p>
+          </div>
+        )}
+        {infoDisplay === 'surface' && (
+          <div className='Planet__copy'>
+            <h1 className='name'>{name}</h1>
+            <p className='text'>{geology.content}</p>
+            <p className='source'>
+              Source:{' '}
+              <a className='source__link' href={geology.source}>
+                Wikipedia
+              </a>
+            </p>
+          </div>
+        )}
+
+        <ul className='Planet__stats'>
+          <li className='stat-item'>
+            <span className='stat-name'>Rotation Time</span>
+            <span className='stat-value'>{rotation} days</span>
+          </li>
+          <li className='stat-item'>
+            <span className='stat-name'>Revolution Time</span>
+            <span className='stat-value'>{revolution} days</span>
+          </li>
+          <li className='stat-item'>
+            <span className='stat-name'>Radius</span>
+            <span className='stat-value'>{radius} km</span>
+          </li>
+          <li className='stat-item'>
+            <span className='stat-name'>Average temp.</span>
+            <span className='stat-value'>{temperature} ºC</span>
+          </li>
+        </ul>
       </div>
     )
   } else {
