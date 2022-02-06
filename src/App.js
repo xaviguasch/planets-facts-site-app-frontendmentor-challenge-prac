@@ -1,16 +1,24 @@
-import { Outlet, Link } from 'react-router-dom'
+import React, { useState } from 'react'
+
+import { Outlet } from 'react-router-dom'
 
 import Header from './components/Header'
-import PlanetContainer from './components/PlanetContainer'
+import ModalNav from './components/ModalNav'
 
 import './App.css'
 
 function App() {
+  const [isNavModalOpen, setIsNavModalOpen] = useState(false)
+
+  const modalLinkHandler = () => {
+    setIsNavModalOpen((prev) => !prev)
+  }
+
   return (
     <div className='App'>
-      <Header />
+      <Header onModalLinkHandler={modalLinkHandler} />
 
-      <Outlet />
+      {isNavModalOpen ? <ModalNav onModalLinkHandler={modalLinkHandler} /> : <Outlet />}
     </div>
   )
 }

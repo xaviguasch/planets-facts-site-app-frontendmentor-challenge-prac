@@ -6,7 +6,7 @@ import IconHamburger from '../assets/icon-hamburger.svg'
 
 import './Header.css'
 
-const Header = () => {
+const Header = ({ onModalLinkHandler }) => {
   return (
     <div className='Header'>
       <h2 className='Header__title'>The Planets</h2>
@@ -20,7 +20,7 @@ const Header = () => {
           ))}
         </ul>
 
-        <div className='Header__nav__hamb'>
+        <div className='Header__nav__hamb' onClick={onModalLinkHandler}>
           <img src={IconHamburger} alt='icon-hamburger' />
         </div>
       </nav>
