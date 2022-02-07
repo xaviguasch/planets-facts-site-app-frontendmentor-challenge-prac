@@ -27,7 +27,14 @@ function App() {
     <div className='App'>
       <Header onModalLinkHandler={modalLinkHandler} onIsNavModalOpen={isNavModalOpen} />
 
-      {isNavModalOpen ? <ModalNav onModalLinkHandler={modalLinkHandler} /> : <Outlet />}
+      <div className='display-mobile'>
+        {isNavModalOpen ? <ModalNav onModalLinkHandler={modalLinkHandler} /> : <Outlet />}
+      </div>
+
+      {/* Prevents the nav from showing up twice in non-mobile screens */}
+      <div className='display-tablet'>
+        <Outlet />
+      </div>
     </div>
   )
 }

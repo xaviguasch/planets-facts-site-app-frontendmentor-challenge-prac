@@ -92,6 +92,7 @@ img {
 /* ================== */
 .Header__title {
   font-family: var(--ff-secondary);
+  font-weight: var(--fw-regular);
   text-transform: uppercase;
   font-size: var(--fs-28);
   letter-spacing: -1.05px;
@@ -220,22 +221,5 @@ ul {
   .stat-value {
     font-size: var(--fs-24);
     letter-spacing: -0.9px;
-  }
-
-  /* Buttons & inputs */
-  .Planet__btn {
-    /* text-decoration: none;
-    text-transform: uppercase;
-    font-weight: var(--fw-bold);
-    letter-spacing: 1.93px;
-    color: var(--clr-white-text-alt);
-    font-size: var(--fs-09);
-
-    border: none;
-    background-color: transparent;
-    cursor: pointer;
-
-    padding: 1.75em 0;
-    border-bottom: 4px solid transparent; */
   }
 }

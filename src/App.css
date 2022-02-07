@@ -4,3 +4,22 @@
   background-repeat: no-repeat;
   background-size: cover;
 }
+
+.display-tablet {
+  display: none;
+}
+
+/* ================== */
+/* MEDIA QUERIES */
+/* ================== */
+
+/* Tablet */
+@media (min-width: 768px) {
+  .display-tablet {
+    display: unset;
+  }
+
+  .display-mobile {
+    display: none;
+  }
+}

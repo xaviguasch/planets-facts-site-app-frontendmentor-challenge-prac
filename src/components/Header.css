@@ -15,3 +15,35 @@
 .Header__nav__list {
   display: none;
 }
+
+/* ================== */
+/* MEDIA QUERIES */
+/* ================== */
+
+/* Tablet */
+@media (min-width: 768px) {
+  .Header {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 2em 3.25em 1.75em;
+  }
+
+  .Header__nav {
+    width: 100%;
+  }
+
+  .Header__nav__hamb-btn {
+    display: none;
+  }
+
+  .Header__nav__list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 100%;
+  }
+}
