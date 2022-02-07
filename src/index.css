@@ -145,6 +145,18 @@ img {
 /* ================== */
 /* Buttons & inputs */
 /* ================== */
+
+.Header__nav__hamb-btn,
+.Planet__btn {
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+}
+
+.Header__nav__hamb-btn:disabled {
+  cursor: not-allowed;
+}
+
 .Planet__btn {
   text-decoration: none;
   text-transform: uppercase;
@@ -152,10 +164,6 @@ img {
   letter-spacing: 1.93px;
   color: var(--clr-white-text-alt);
   font-size: var(--fs-09);
-
-  border: none;
-  background-color: transparent;
-  cursor: pointer;
 
   padding: 1.75em 0;
   border-bottom: 4px solid transparent;

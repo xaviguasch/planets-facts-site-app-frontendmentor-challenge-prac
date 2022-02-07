@@ -5,7 +5,7 @@ import data from '../data.json'
 
 import './Planet.css'
 
-const Planet = ({ testing }) => {
+const Planet = () => {
   const [infoDisplay, setInfoDisplay] = useState('overview')
 
   const handleInfoDisplayChange = (e) => {

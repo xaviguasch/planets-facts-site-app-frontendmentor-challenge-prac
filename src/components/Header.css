@@ -6,10 +6,12 @@
   padding: 1em 1.5em;
 }
 
-.Header__nav__list {
-  display: none;
+.Header__nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.Header__nav__hamb {
-  cursor: pointer;
+.Header__nav__list {
+  display: none;
 }

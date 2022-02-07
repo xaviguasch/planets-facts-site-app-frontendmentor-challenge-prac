@@ -13,7 +13,7 @@ function App() {
   let params = useParams()
 
   useEffect(() => {
-    // Checks if params object is empty or not. If it has data (because the user introduced a planet url), then it closes the modal via state and shows the planet component.
+    // Checks if params object is empty or not. If it has data (because the user wrote a planet url directly), then it closes the modal via state and shows the planet component.
     if (Object.keys(params).length !== 0) {
       setIsNavModalOpen(false)
     }
