@@ -70,6 +70,8 @@
 
   --clr-white-alt: hsla(0, 0%, 100%, 0.2);
   --clr-white-alt-2: hsla(0, 0%, 100%, 0.1);
+
+  --clr-grey: hsla(0, 0%, 85%, 0.2);
 }
 
 body {
@@ -238,6 +240,15 @@ ul {
     text-align: left;
   }
 
+  .Planet__btn:hover {
+    background-color: var(--clr-grey);
+    border: 1px solid var(--clr);
+  }
+
+  .Planet__btn.active {
+    color: var(--clr-white-text);
+  }
+
   .Mercury .Planet__btn.active {
     background-color: var(--clr-mercury);
     border-bottom: unset;
@@ -276,4 +287,8 @@ ul {
     color: var(--clr-white-text-alt);
     margin-right: 0.9em;
   }
+}
+
+/* Laptop */
+@media (min-width: 1275px) {
 }

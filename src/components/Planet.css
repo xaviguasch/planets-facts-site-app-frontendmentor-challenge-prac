@@ -100,6 +100,9 @@
     padding: 0 2.5em;
 
     border-top: 1px solid var(--clr-white-alt);
+
+    max-width: 850px;
+    margin: 0 auto;
   }
 
   .planet-img-container {
