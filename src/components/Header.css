@@ -47,17 +47,22 @@
 
     width: 100%;
   }
+}
 
-  .nav-link {
-    text-transform: uppercase;
-    color: var(--clr-white-text-alt-2);
-    letter-spacing: 1px;
-    text-decoration: none;
-    font-size: var(--fs-11);
-    font-weight: var(--fw-bold);
+/* Laptop */
+@media (min-width: 1275px) {
+  .Header {
+    flex-direction: row;
+    gap: unset;
+
+    padding: 1.375em 2em 1.65em;
   }
 
-  .nav-link:hover {
-    color: var(--clr-white-text);
+  .Header__nav {
+    width: unset;
+  }
+
+  .Header__nav__list {
+    gap: 2em;
   }
 }

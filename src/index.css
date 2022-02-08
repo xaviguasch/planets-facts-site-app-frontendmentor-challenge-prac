@@ -230,6 +230,20 @@ ul {
     letter-spacing: -0.9px;
   }
 
+  /* Links */
+  .nav-link {
+    text-transform: uppercase;
+    color: var(--clr-white-text-alt-2);
+    letter-spacing: 1px;
+    text-decoration: none;
+    font-size: var(--fs-11);
+    font-weight: var(--fw-bold);
+  }
+
+  .nav-link:hover {
+    color: var(--clr-white-text);
+  }
+
   /* Buttons and inputs */
   .Planet__btn {
     background-color: transparent;
@@ -291,4 +305,35 @@ ul {
 
 /* Laptop */
 @media (min-width: 1275px) {
+  /* Typography */
+
+  .name {
+    font-size: var(--fs-80);
+  }
+
+  .text {
+    font-size: var(--fs-14);
+  }
+
+  .source {
+    font-size: var(--fs-14);
+  }
+
+  .stat-name {
+    font-size: var(--fs-11);
+    letter-spacing: 1px;
+  }
+
+  .stat-value {
+    font-family: var(--ff-secondary);
+    font-size: var(--fs-40);
+    letter-spacing: -1.5px;
+  }
+
+  /* Links */
+
+  /* Buttons and inputs */
+  .Planet__btn {
+    font-size: var(--fs-12);
+  }
 }
