@@ -39,7 +39,7 @@ const Planet = () => {
                 onClick={handleInfoDisplayChange}
                 value='overview'
               >
-                Overview
+                <span className='Planet__btn__num'>01</span>Overview
               </button>
             </li>
             <li>
@@ -48,7 +48,7 @@ const Planet = () => {
                 onClick={handleInfoDisplayChange}
                 value='structure'
               >
-                Structure
+                <span className='Planet__btn__num'>02</span>Structure
               </button>
             </li>
             <li>
@@ -57,7 +57,7 @@ const Planet = () => {
                 onClick={handleInfoDisplayChange}
                 value='surface'
               >
-                Surface
+                <span className='Planet__btn__num'>03</span>Surface
               </button>
             </li>
           </ul>
@@ -141,19 +141,19 @@ const Planet = () => {
         <ul className='Planet__stats'>
           <li className='stat-item'>
             <span className='stat-name'>Rotation Time</span>
-            <span className='stat-value'>{rotation} days</span>
+            <span className='stat-value'>{rotation}</span>
           </li>
           <li className='stat-item'>
             <span className='stat-name'>Revolution Time</span>
-            <span className='stat-value'>{revolution} days</span>
+            <span className='stat-value'>{revolution}</span>
           </li>
           <li className='stat-item'>
             <span className='stat-name'>Radius</span>
-            <span className='stat-value'>{radius} km</span>
+            <span className='stat-value'>{radius}</span>
           </li>
           <li className='stat-item'>
             <span className='stat-name'>Average temp.</span>
-            <span className='stat-value'>{temperature} ºC</span>
+            <span className='stat-value'>{temperature}</span>
           </li>
         </ul>
       </div>

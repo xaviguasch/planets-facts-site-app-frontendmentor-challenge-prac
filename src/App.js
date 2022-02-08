@@ -31,7 +31,7 @@ function App() {
         {isNavModalOpen ? <ModalNav onModalLinkHandler={modalLinkHandler} /> : <Outlet />}
       </div>
 
-      {/* Prevents the nav from showing up twice in non-mobile screens */}
+      {/* Prevents the modal nav from showing in non-mobile screens, as we already have a nav in Header */}
       <div className='display-tablet'>
         <Outlet />
       </div>

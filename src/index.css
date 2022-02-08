@@ -52,6 +52,7 @@
   /* Text */
   --clr-white-text: hsla(0, 0%, 100%, 1);
   --clr-white-text-alt: hsla(0, 0%, 100%, 0.5);
+  --clr-white-text-alt-2: hsla(0, 0%, 100%, 0.75);
   --clr-grey-text: hsla(240, 6%, 54%, 1);
 
   /* Background  */
@@ -199,6 +200,10 @@ img {
   border-bottom: 4px solid var(--clr-neptune);
 }
 
+.Planet__btn__num {
+  display: none;
+}
+
 /* ================== */
 /* Utility styles */
 /* ================== */
@@ -221,5 +226,54 @@ ul {
   .stat-value {
     font-size: var(--fs-24);
     letter-spacing: -0.9px;
+  }
+
+  /* Buttons and inputs */
+  .Planet__btn {
+    background-color: transparent;
+    padding: 1.75em 1.25em;
+    border: 1px solid var(--clr-white-alt);
+    width: 100%;
+    color: var(--clr-white-text);
+    text-align: left;
+  }
+
+  .Mercury .Planet__btn.active {
+    background-color: var(--clr-mercury);
+    border-bottom: unset;
+  }
+  .Venus .Planet__btn.active {
+    background-color: var(--clr-venus);
+    border-bottom: unset;
+  }
+  .Earth .Planet__btn.active {
+    background-color: var(--clr-earth);
+    border-bottom: unset;
+  }
+  .Mars .Planet__btn.active {
+    background-color: var(--clr-mars);
+    border-bottom: unset;
+  }
+  .Jupiter .Planet__btn.active {
+    background-color: var(--clr-jupiter);
+    border-bottom: unset;
+  }
+  .Saturn .Planet__btn.active {
+    background-color: var(--clr-saturn);
+    border-bottom: unset;
+  }
+  .Uranus .Planet__btn.active {
+    background-color: var(--clr-urarnus);
+    border-bottom: unset;
+  }
+  .Neptune .Planet__btn.active {
+    background-color: var(--clr-neptune);
+    border-bottom: unset;
+  }
+
+  .Planet__btn__num {
+    display: inline-block;
+    color: var(--clr-white-text-alt);
+    margin-right: 0.9em;
   }
 }

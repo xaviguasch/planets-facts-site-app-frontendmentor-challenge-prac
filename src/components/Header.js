@@ -15,7 +15,9 @@ const Header = ({ onModalLinkHandler, onIsNavModalOpen }) => {
         <ul className='Header__nav__list'>
           {data.map((d) => (
             <li key={d.name}>
-              <Link to={`/planets/${d.name.toLowerCase()}`}>{d.name}</Link>
+              <Link className='nav-link' to={`/planets/${d.name.toLowerCase()}`}>
+                {d.name}
+              </Link>
             </li>
           ))}
         </ul>
