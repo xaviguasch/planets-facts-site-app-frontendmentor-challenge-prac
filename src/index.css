@@ -256,7 +256,7 @@ ul {
 
   .Planet__btn:hover {
     background-color: var(--clr-grey);
-    border: 1px solid var(--clr);
+    border: 1px solid var(--clr-grey);
   }
 
   .Planet__btn.active {
